@@ -1,0 +1,24 @@
+package com.ileiwe.ileiwe.model;
+
+import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
+
+import javax.persistence.*;
+import java.time.LocalDateTime;
+
+@Entity
+@Data
+public class LearningParty {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column(unique = true, nullable = false)
+    private String email;
+    @Column(nullable = false)
+    private String passWord;
+    private boolean enabled;
+    @CreationTimestamp
+    private LocalDateTime dateCreated;
+
+
+}
