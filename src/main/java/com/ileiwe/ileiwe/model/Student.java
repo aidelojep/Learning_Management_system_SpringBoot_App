@@ -18,8 +18,6 @@ public class Student {
     private LocalDate dob;
     @Enumerated(EnumType.STRING)
     private Gender gender;
-    @OneToMany
-    private LearningParty learningParty;
 
     @ManyToMany
     private List<Course> courses;

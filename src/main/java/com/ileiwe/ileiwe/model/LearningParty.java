@@ -5,6 +5,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Data
@@ -19,6 +20,7 @@ public class LearningParty {
     private boolean enabled;
     @CreationTimestamp
     private LocalDateTime dateCreated;
-
+    @OneToMany
+    private List<Authority> authorities;
 
 }

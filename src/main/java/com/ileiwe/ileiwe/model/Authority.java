@@ -12,8 +12,6 @@ public class Authority {
     @Id
     @GeneratedValue
     private UUID id;
-    @ManyToOne()
-    private LearningParty user;
     @Enumerated(EnumType.STRING)
     private Role authority;
 
