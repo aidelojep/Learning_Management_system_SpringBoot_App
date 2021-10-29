@@ -18,7 +18,6 @@ class IleIweApplicationTests {
 	@Autowired
 	DataSource dataSource;
 
-
 	@Test
 	void testConnectionToDbNotNull() {
 		assertThat(dataSource).isNotNull();
